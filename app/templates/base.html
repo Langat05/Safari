@@ -1,0 +1,30 @@
+{% extends 'bootstrap/base.html'%}
+
+!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> Welcome to Africa </title>
+    {% endif %}
+</head>
+
+<body>
+    <!-- Content block -->
+
+    {% block navbar %}
+    {% include 'navbar.html' %}
+    {% endblock %}
+
+
+    {% block content %}
+    {% endblock%}
+    
+    
+
+</body>
+
+</html>

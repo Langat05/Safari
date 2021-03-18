@@ -1,0 +1,171 @@
+{% extends 'base.html'%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {% endblock %}
+
+    {% block content %}
+    <div class="container-fluid">
+        <div class="search-container">
+            <form action="/action_page.php"
+                style="text-align: center;background-color: rgb(110, 172, 48);height: 150px;margin-top: -1.52%;padding: 5%;">
+                <label for="Keyword">Keyword</label>
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search" style="padding-right: 20px;"></i></button>
+                <label for="Destination" style="padding-left: 50px;">Destination</label>
+                <select id="destine" name="destine" style="padding-right: 30px;">
+                    <option value="Any">any</option>
+                    <option value="mara">Mara</option>
+                    <option value="Tsavo">Tsavo</option>
+                    <option value="Tanzania">Tanzania</option>
+                </select>
+                <input type="submit" style="margin-left: 50px;">
+            </form>
+        </div>
+        <div class="container">
+            <p><strong style="font-size: 30px;">POPULAR SAFARI PACKAGES</strong></p>
+        </div>
+        <div class="container-fluid" style="display: inline-flex;">
+            <div style="padding-left: 25px;">
+                <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                <p><b>9 DAYS ABERDARES, LAKE NAKURU, MASAI MARA & MOMBASA SAFARI HOLIDAY</b></p>
+                <div style="background-color: darkgray;height: 40px;width: 350px;">
+                    <p style="padding: 13px;">From <span style="padding-left:65%;">$2650</span></p>
+                </div>
+            </div>
+            <div style="padding-left: 25px;">
+                <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                <p><b>9 DAYS ABERDARES, LAKE NAKURU, MASAI MARA & MOMBASA SAFARI HOLIDAY</b></p>
+                <div style="background-color: darkgray;height: 40px;width: 350px;">
+                    <p style="padding: 13px;">From <span style="padding-left:65%;">$2650</span></p>
+                </div>
+            </div>
+            <div style="padding-left: 25px;">
+                <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                <p><b>9 DAYS ABERDARES, LAKE NAKURU, MASAI MARA & MOMBASA SAFARI HOLIDAY</b></p>
+                <div style="background-color: darkgray;height: 40px; width: 350px;">
+                    <p style="padding: 13px;">From <span style="padding-left:65%;">$2650</span></p>
+                </div>
+            </div>
+        </div><br><br><br>
+        <div class="container">
+            <p><strong style="font-size: 30px;">TOP VACATION TOURS</strong> <span style="padding-left: 20%;"><a
+                        href="'/">/ View All Tours</a></span></p>
+        </div>
+        <div class="container-fluid" style="display: inline-flex;">
+            <div style="padding-left: 25px;">
+                <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                <p><b>10 DAYS ULTIMATE KENYA BIG5 AND MIGRATION SAFARI</b></p>
+                <div style="background-color: darkgray;height: 40px;width: 350px;">
+                    <p style="padding: 13px;">From <span style="padding-left:65%;">$2650</span></p>
+                </div>
+            </div>
+            <div style="padding-left: 25px;">
+                <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                <p><b>10 DAYS ULTIMATE KENYA BIG5 AND MIGRATION SAFARI</b></p>
+                <div style="background-color: darkgray;height: 40px;width: 350px;">
+                    <p style="padding: 13px;">From <span style="padding-left:65%;">$2650</span></p>
+                </div>
+            </div>
+            <div style="padding-left: 25px;">
+                <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                <p><b>10 DAYS ULTIMATE KENYA BIG5 AND MIGRATION SAFARI</b></p>
+                <div style="background-color: darkgray;height: 40px; width: 350px;">
+                    <p style="padding: 13px;">From <span style="padding-left:65%;">$2650</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <h1><b style="font-size: 30px; padding-left: 35%;">TRAVEL COMFORT ZONE</b></h1>
+            <p style="text-align: center;">...the real safaris</p>
+            <div>
+                <p>
+                <div class="row no-padding" style="padding: 0; float: right;">
+                    <div class="col md-4 my-styles"
+                        style="width:400px;height:170px;margin-left:25px;border-style:solid;border-color: darkgreen;">
+                        <p><b>TripAdvisor</b></p>
+                        <p><strong>Safaris Zone</strong></p>
+                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book.</p>
+                    </div>
+                </div>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.<br> It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. <br>It was popularised in
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus PageMaker including
+                versions of Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid" style="display: inline-flex;">
+            <div style="padding-left: 25px;">
+                <a href="/">
+                    <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                </a>
+            </div>
+            <div style="padding-left: 25px;">
+                <a href="/">
+                    <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                </a>
+            </div>
+            <div style="padding-left: 25px;">
+                <a href="/">
+                    <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="container-fluid" style="display: inline-flex;">
+            <div style="padding-left: 25px;">
+                <a href="/">
+                    <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                </a>
+            </div>
+            <div style="padding-left: 25px;">
+                <a href="/">
+                    <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                </a>
+            </div>
+            <div style="padding-left: 25px;">
+                <a href="/">
+                    <img src="{{url_for('static', filename='Tiger.jpeg')}}" style="height: 200px;width: 350px;">
+                </a>
+            </div>
+
+        </div>
+
+        <div class="container-fluid"
+            style="height: 10rem; background-color: rgb(19, 126, 43);margin-top: 10rem; display: inline-flex;padding: 40px;color: white; width: 100%;">
+            <p style="margin-right: 20%;">400 Visitors</p>
+            <p>Award Winning</p>
+            <p style="margin-left: 20%;">Secure Payment</p>
+            <p style="margin-left: 20%;">Exiting Packages</p>
+        </div>
+        <div class="container-fluid">
+            <h3 style="text-align: center;">REVIEWS FROM OUR CLIENTS</h3>
+            <p style="text-align: center;">These are the reviews...........</p>
+        </div>
+    </div><br><br><br>
+    {% include 'footer.html' %}
+    {% endblock%}
+
+</body>
+
+</html>
