@@ -2,8 +2,9 @@ class Config:
     '''
     General configuration parent class
     '''
-    pass
-
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://langatj:Access@localhost/safari'
+    SECRET_KEY = 'thisismysecretkeydonotstealit'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class ProdConfig(Config):
@@ -25,3 +26,9 @@ class DevConfig(Config):
     '''
 
     DEBUG = True
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://langatj:Access@localhost/safari'
+
+config_options = {
+'development':DevConfig,
+'production':ProdConfig
+}

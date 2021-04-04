@@ -4,6 +4,13 @@
 <html>
 
 <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+
+
     <meta charset="utf-8">
     {% if title %}
     <title> {{ title }}</title>
@@ -16,14 +23,15 @@
     <!-- Content block -->
 
     {% block navbar %}
-    {% include 'navbar.html' %}
+    {% include 'includes/_navbar.html' %}
     {% endblock %}
 
 
     {% block content %}
-    {% endblock%}
-    
-    
+
+    {% endblock %}
+
+
 
 </body>
 
